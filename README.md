@@ -91,7 +91,7 @@ Este projeto visa o desenvolvimento de uma solução com foco em controle inteli
 
 ## Esboço da arquitetura
 <p align="center">
-<img src="assets/diagram2.jpg" alt="Arquitetura do projeto" border="0" width=80% height=80%></a>
+<img src="assets/diagrama2.jpg" alt="Arquitetura do projeto" border="0" width=80% height=80%></a>
 </p>
 
 ## Explicação da estratégia de coleta de dados
