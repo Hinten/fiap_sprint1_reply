@@ -11,7 +11,7 @@
 ## Nome do grupo
 
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 1</a>
+- <a href="https://www.linkedin.com/in/alice-caroline-marinho">Alice Caroline Marinho de Assis</a>
 - <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 2</a>
 - <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
 - <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 4</a> 
@@ -71,9 +71,16 @@ Este projeto visa o desenvolvimento de uma solução com foco em controle inteli
 
 3) Qual é a justificativa para a escolha de um banco de dados local ou na núvem? Qual é a sua escabilidade e viabilidade em relação ao projeto?
 
-- Banco de dados local: O banco de dados local pode ser mais rápido e seguro, pois os dados não precisam ser transferidos pela internet. No entanto, pode ser mais difícil de escalar e manter, além de ter um custo inicial maior e requerer mais mão de obra.
-- Banco de dados na nuvem: O banco de dados na nuvem pode ser mais fácil de escalar e manter, além de ter um custo inicial menor. No entanto, pode ser mais lento e menos seguro, pois os dados precisam ser transferidos pela internet. 
-- A escolha entre um banco de dados local ou na nuvem dependerá das necessidades específicas da empresa, da infraestrutura disponível e preocupação com o sigilo dos dados.
+A escolha entre um banco de dados local ou na nuvem deve considerar as necessidades específicas do projeto, a infraestrutura disponível e o nível de exigência quanto disponibilidade dos dados.
+
+Banco de dados local:
+A implementação local demanda um investimento inicial elevado, com custos associados à aquisição de servidores, infraestrutura de TI e mão de obra especializada para instalação e manutenção. Além disso, a escalabilidade tende a ser limitada, exigindo novos aportes sempre que for necessário expandir a capacidade. No entanto, pode apresentar melhor desempenho em ambientes com alto volume de acesso interno e menor dependência de conectividade externa.
+
+Banco de dados na nuvem:
+Soluções em nuvem oferecem maior flexibilidade e disponibilidade, o modelo de cobrança por demanda reduz o custo inicial e possibilita um controle mais eficiente do orçamento, com escalabilidade praticamente automática conforme o crescimento do projeto. Além disso, os serviços em nuvem geralmente incluem atualizações e suporte técnico contínuo, o que reduz a necessidade de equipe técnica dedicada.
+
+Conclusão:
+Para o nosso projeto, os bancos de dados na nuvem apresentam maior viabilidade financeira e operacional, oferecendo uma solução escalável, com alta disponibilidade e menor custo inicial. Já os bancos de dados locais podem ser considerados em situações específicas que demandem desempenho interno superior, desde que se justifique o investimento necessário.
 
 4) Qual é o potencial de uso de serviços em nuvem (como AWS EC2, RDS, Lambda ou similares) na arquitetura proposta, mesmo que simulados na etapa atual?
 
