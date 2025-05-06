@@ -93,13 +93,20 @@ Este projeto visa o desenvolvimento de uma solução com foco em controle inteli
 - Processamento de dados:    Os dados coletados dos sensores serão processados em tempo real utilizando Python, com bibliotecas como NumPy, Pandas e SciPy. O processamento incluirá etapas como limpeza, transformação, integração e filtragem:
 
     Limpeza: Esta etapa envolve a remoção de dados errôneos ou inconsistentes, como valores ausentes, duplicados ou fora de contexto. O objetivo é garantir que os dados sejam precisos e representem a realidade do       que está sendo medido pelos sensores.
+  
     Transformação: Nessa fase, os dados são convertidos em formatos ou escalas mais adequados para análise. Isso pode incluir a normalização de valores, a conversão de variáveis categóricas em numéricas ou a            aplicação de funções matemáticas para ajustar os dados.
+  
     Integração: Caso os dados venham de diferentes fontes ou sensores, a integração combina essas informações em um único conjunto, garantindo que todas as variáveis relevantes sejam consideradas de forma coesa e       sem sobreposição.
+  
     Filtragem: Nessa etapa, são selecionados apenas os dados relevantes para o objetivo da análise. Isso pode envolver a remoção de valores fora de um intervalo específico ou a escolha de dados de interesse com         base em critérios predefinidos.
 
     Essas etapas garantirão que os dados estejam preparados de forma eficiente para as análises e modelagens posteriores.
 
-- Análise de dados:    A análise dos dados será realizada utilizando algoritmos de Machine Learning, com uma combinação de modelos para tratamento em tempo real (ou em curtos intervalos de tempo) e modelos mais robustos para volumes maiores de dados. Para dados processados em tempo real ou em curtos períodos de tempo (algumas vezes ao dia), será utilizada uma combinação dos modelos Random Forest e Isolation Forest, que rodarão localmente, oferecendo respostas rápidas e eficazes. Já para grandes volumes de dados acumulados ao longo de períodos mais longos (a definir com o cliente), a análise será feita utilizando modelos robustos, como o TabTransformer ou o XGBoost, executados em nuvem. Esses modelos são capazes de lidar com grandes quantidades de dados e oferecem uma análise detalhada e precisa. Com a divisão entre modelos para análise em tempo real e modelos voltados a grandes volumes de dados, o sistema oferecerá maior flexibilidade e eficiência, entregando respostas rápidas quando necessário e análises aprofundadas para o planejamento estratégico.
+- Análise de dados:    A análise dos dados será realizada utilizando algoritmos de Machine Learning, com uma combinação de modelos para tratamento em tempo real (ou em curtos intervalos de tempo) e modelos mais         robustos para volumes maiores de dados.
+
+    Para dados processados em tempo real ou em curtos períodos de tempo (algumas vezes ao dia), será utilizada uma combinação dos modelos Random Forest e Isolation Forest, que rodarão localmente, oferecendo             respostas rápidas e eficazes. Já para grandes volumes de dados acumulados ao longo de períodos mais longos (a definir com o cliente), a análise será feita utilizando modelos robustos, como o TabTransformer ou o     XGBoost, executados em nuvem.
+  
+    Esses modelos são capazes de lidar com grandes quantidades de dados e oferecem uma análise detalhada e precisa. Com a divisão entre modelos para análise em tempo real e modelos voltados a grandes volumes de         dados, o sistema oferecerá maior flexibilidade e eficiência, entregando respostas rápidas quando necessário e análises aprofundadas para o planejamento estratégico.
 
 - Predição:    Os modelos de Machine Learning serão utilizados para prever eventos futuros com base nos dados dos sensores. As previsões geradas poderão acionar alertas automáticos, alimentar análises e gerar informações simples no dashboard interativo, além de embasar análises mais complexas para decisões específicas, como determinar se vale a pena realizar uma manutenção e qual o melhor momento para isso.
 
