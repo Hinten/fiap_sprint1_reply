@@ -139,48 +139,81 @@ Não entendi, confirmar com o professor
 
 ## Plano inicial de desenvolvimento
 
-- Fase 1: Coleta de dados
-    - Coletar dados dos sensores conectados ao ESP32 utilizando o protocolo MQTT.
-    - Armazenar os dados em um banco de dados relacional ou NoSQL.
-    - Processar os dados em tempo real utilizando Python e bibliotecas como NumPy, Pandas e Scipy.
-  
-- Fase 2: Análise de dados
-    - Analisar os dados coletados utilizando algoritmos de Machine Learning, como regressão linear, árvores de decisão e redes neurais.
-    - Implementar os modelos de Machine Learning em Python utilizando bibliotecas como TensorFlow ou PyTorch.
-    - Visualizar os dados utilizando bibliotecas como Matplotlib e Seaborn.
-    - Criar gráficos e dashboards para apresentar os resultados da análise de dados e das previsões.
-     
-- Fase 3: Predição
-    - Utilizar os modelos de Machine Learning para prever eventos futuros com base nos dados coletados dos sensores.
-    - Acionar alertas automáticos com base nas previsões dos modelos de Machine Learning.
-    - Enviar os alertas por e-mail, SMS ou através de notificações em um aplicativo.
+ ✅ Fase 1: Coleta de Dados
+- **Membro responsável:** Alice Caroline  
+- 📆 *13 de Maio a 9 de Junho*
+- Tarefas:
+  -[] Coletar dados via MQTT usando ESP32
+  -[] Armazenar em banco relacional ou NoSQL
+  -[] Processamento inicial com Python (NumPy, Pandas, SciPy)
 
-- Fase 4: Integração com APIs
-    - Integrar os modelos de Machine Learning com APIs RESTful para permitir a comunicação entre diferentes serviços.
-    - Implementar as APIs utilizando frameworks como Flask ou FastAPI.
-    - Documentar as APIs utilizando Swagger ou Postman.
-    - Criar testes automatizados para as APIs utilizando bibliotecas como pytest ou unittest.
+---
 
-- Fase 5: Implementação de contêineres Docker
-    - Implementar contêineres Docker para facilitar a escalabilidade e portabilidade do sistema.
-    - Criar um Dockerfile para cada serviço do sistema.
-    - Utilizar o Docker Compose para orquestrar os contêineres.
-    - Criar testes automatizados para os contêineres utilizando bibliotecas como pytest ou unittest.
+ 📊 Fase 2: Análise de Dados
+- **Membros responsáveis:** Vitor Albuquerque e Leonardo Sampaio
+- 📆 *10 de Junho a 9 de Julho*
+- Tarefas:
+  -[] Análise com regressão, árvore de decisão e redes neurais
+  -[] Visualização com Matplotlib e Seaborn
+  -[] Criação de dashboards com insights
 
-- Fase 6: Implementação de testes automatizados
-    - Implementar testes automatizados para o sistema utilizando bibliotecas como pytest ou unittest.
-    - Criar testes unitários, de integração e de aceitação para garantir a qualidade do código.
-    - Utilizar ferramentas de integração contínua (CI) para executar os testes automatizados em cada commit.
+---
 
-- Fase 7: Documentação
-    - Criar uma documentação clara e concisa para facilitar a compreensão do sistema.
-    - Utilizar ferramentas de geração de documentação automática para manter a documentação atualizada.
+ 🔮 Fase 3: Predição
+- **Membro responsável:** Vitor Albuquerque
+- 📆 *15 de Julho a 18 de Agosto*
+- Tarefas:
+  -[] Modelos preditivos com alertas automáticos
+  -[] Envio de alertas por email, SMS ou app
 
-- Fase 8: Implementação de melhorias
-    - Implementar melhorias no sistema com base no feedback dos usuários e nas análises de desempenho.
-    - Realizar testes de carga e estresse para garantir que o sistema possa lidar com grandes volumes de dados.
-    - Monitorar o desempenho do sistema e realizar ajustes conforme necessário.
-    - Implementar melhorias na interface do usuário para facilitar a interação com o sistema.
+---
+
+ 🔌 Fase 4: Integração com APIs
+- **Membro responsável:** Lucas Basseto
+- 📆 *18 de Agosto a 15 de Setembro*
+- Tarefas:
+  -[] Integração com APIs RESTful usando Flask ou FastAPI
+  -[] Documentação com Swagger ou Postman
+  -[] Testes automatizados com `pytest` ou `unittest`
+
+---
+
+ 🐳 Fase 5: Contêineres Docker
+- **Membro responsável:** Pedro Lucas
+- 📆 *16 de Setembro a 13 de Outubro*
+- Tarefas:
+  -[] Dockerfile para cada serviço
+  -[] Orquestração com Docker Compose
+  -[] Testes automatizados dos containers
+
+---
+
+ ✅ Fase 6: Testes Automatizados
+- **Membros responsáveis:** Pedro Lucas e Lucas Basseto
+- 📆 *14 de Outubro a 03 de Novembro*
+- Tarefas:
+  -[] Testes unitários, integração e aceitação
+  -[] CI para rodar testes automaticamente a cada commit
+
+---
+
+ 📚 Fase 7: Documentação
+- **Membro responsável:** Leonardo Sampaio
+- 📆 *04 de Novembro a 17 de Novembro*
+- Tarefas:
+  -[] Documentação clara e atualizada
+  -[] Uso de ferramentas automáticas de geração de doc
+
+---
+
+ 🔧 Fase 8: Melhorias
+- **Membros responsáveis:** Todos do grupo
+- 📆 *20 de novembro a 7 de dezembro*
+- Tarefas:
+  -[] Testes de carga e estresse
+  -[] Monitoramento e ajustes
+  -[] Melhorias na interface
+
 
 
 ## 🗃 Histórico de lançamentos
