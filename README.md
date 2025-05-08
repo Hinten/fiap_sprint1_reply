@@ -58,7 +58,72 @@ Custo-Benefício: Amazon S3 armazena dados brutos a baixo custo (US$ 0,023/GB/m�
 
 **Como será feita a integração com modelos de IA?**
 
-**R:** A integração com modelos de IA será realizada através de APIs RESTful. Os dados coletados dos sensores serão enviados para um serviço que executará os modelos de IA, que podem ser implementados em Python utilizando bibliotecas como TensorFlow ou PyTorch. Os resultados das previsões serão retornados para o sistema e poderão ser armazenados no banco de dados ou utilizados para acionar alertas automáticos.
+**R:** A integração com modelos de IA será realizada através de APIs RESTful. Os dados coletados dos sensores serão enviados para um serviço de backend responsável por executar os modelos de IA, que poderão ser implementados localmente em Python (utilizando bibliotecas como TensorFlow ou PyTorch) ou utilizando plataformas de IA na nuvem, de acordo com a necessidade de escalabilidade e desempenho do projeto.
+
+Entre as soluções em nuvem consideradas para a execução dos modelos estão:
+- Vertex AI (Google Cloud): Ideal para treinar, implantar e gerenciar modelos de Machine Learning em escala, com integração nativa ao BigQuery e pipelines automatizados.
+
+- AWS AI (Amazon SageMaker): Permite treinar e implantar modelos rapidamente com suporte para modelos customizados e otimizados, além de oferecer auto escalonamento e monitoramento.
+
+- OpenAI (ChatGPT API): Pode ser usado para análises baseadas em linguagem natural, geração de insights automatizados ou interação com usuários de forma inteligente.
+
+O sistema escolherá a melhor plataforma com base na natureza do modelo, nos requisitos de latência e custo, e na integração com o restante da arquitetura (Google Cloud, AWS ou OpenAI). Os resultados das previsões serão enviados de volta ao sistema, podendo ser armazenados no banco de dados, visualizados em dashboards ou utilizados para acionar alertas automáticos.
+
+Fizemos uma estimativa de custo utilizando um cenário hipotético de uso para os serviços da Amanzon e Google e Open AI.
+
+💻 AWS AI (Amazon SageMaker)
+
+1. Computação
+- Instância: ml.g4dn.xlarge
+- Duração diária: 6 horas
+- Dias de uso no mês: 20
+- Total de horas: 6 horas/dia × 20 dias = 120 horas
+- Custo por hora: USD 0,7364
+- Custo total de computação: 120 horas × USD 0,7364 = USD 88,368
+
+2. Armazenamento
+- Tipo de armazenamento: SSD de uso geral
+- Tamanho: 5 GB
+- Custo por GB/mês: USD 0,1125
+- Custo total de armazenamento: 5 GB × USD 0,1125 = USD 0,5625
+- Total mensal estimado: USD 88,93
+
+💻 Vertex AI (Google Cloud)
+
+1. Computação
+- Instância: n1-standard-8 com GPU NVIDIA T4
+- Duração diária: 6 horas
+- Dias de uso no mês: 20
+- Total de horas: 6 horas/dia × 20 dias = 120 horas
+- Custo por hora:
+  - n1-standard-8: USD 0,379
+  - GPU NVIDIA T4: USD 0,35
+  - Total por hora: USD 0,729
+- Custo total de computação: 120 horas × USD 0,729 = USD 87,48
+
+2. Armazenamento
+- Tipo de armazenamento: SSD padrão
+- Tamanho: 5 GB
+- Custo por GB/mês: USD 0,17
+- Custo total de armazenamento: 5 GB × USD 0,17 = USD 0,85
+- Total mensal estimado: USD 88,33
+
+💻 OpenAI (ChatGPT API)
+
+1. Cálculo de Tokens
+- Chamadas por dia: 6 horas/dia × 10 chamadas/hora = 60 chamadas/dia
+- Chamadas por mês: 60 chamadas/dia × 20 dias = 1.200 chamadas/mês
+- Tokens de entrada por mês: 1.200 chamadas × 500 tokens = 600.000 tokens
+- Tokens de saída por mês: 1.200 chamadas × 500 tokens = 600.000 tokens
+
+ 2. GPT-4.5
+- Custo por 1.000 tokens de entrada: USD 0,075
+- Custo por 1.000 tokens de saída: USD 0,15
+- Custo de entrada: 600.000 tokens × (USD 0,075 / 1.000) = USD 45,00
+- Custo de saída: 600.000 tokens × (USD 0,15 / 1.000) = USD 90,00
+- Total mensal estimado: USD 135,00
+
+Conclusão: Os custos da Amazon e Google são aproximados, mas os custos da Open AI são significativamente mais elevados.
 
 **Onde ocorrerá o processamento?**
 
@@ -130,12 +195,34 @@ Cenário realista: Para 10 sensores enviando dados a cada 5 segundos, o custo es
 
 ## Esboço da arquitetura
 <p align="center">
-<img src="assets/diagrama2.jpg" alt="Arquitetura do projeto" border="0" width=80% height=80%></a>
+<img src="assets/diagrama2.jpg" alt="Arquitetura do projeto" border="0" width=80% height=80% id="img123"></a>
 </p>
 
-## Explicação da estratégia de coleta de dados
+## Estratégia de coleta de dados
 
-Não entendi, confirmar com o professor
+R: Inicialmente, os dados poderão ser coletados de forma simulada, ou seja, utilizando scripts que geram dados artificiais com base em faixas realistas, 
+padrões esperados ou históricos de sensores. Essa abordagem é útil durante a fase de desenvolvimento e testes, enquanto o hardware (como os sensores ESP32) 
+ainda não estiver plenamente operacional ou disponível fisicamente.
+
+Posteriormente, a coleta passará a ser planejada e realizada com dispositivo físicos, como o microcontrolador ESP32, conectado a diversos sensores (de movimento, temperatura, 
+umidade, entre outros). O ESP32 atuará como um cliente MQTT, enviando dados em tempo real para um servidor MQTT. Esse servidor será responsável por distribuir 
+as mensagens aos serviços interessados, incluindo os responsáveis por armazenar, processar e analisar os dados.
+
+Etapas da estratégia de coleta:
+
+1. Coleta (Simulada ou Planejada):
+   - Simulada: Geração de dados via scripts Python, com base em parâmetros pré-definidos.
+   - Planejada (real): Sensores físicos conectados a microcontroladores (ESP32), enviando dados via MQTT.
+
+2. Transmissão:
+   - Protocolo MQTT será usado para transmitir os dados do ESP32 para o servidor central.
+
+3. Armazenamento:
+   - Os dados poderão ser armazenados em bancos de dados relacionais (PostgreSQL, Oracle, Amazon RDS) ou NoSQL (Firebase), dependendo da necessidade de estruturação, escalabilidade e tempo de consulta.
+
+4. Processamento:
+   - O processamento ocorrerá localmente ou na nuvem utilizando bibliotecas como NumPy, Pandas e SciPy, realizando etapas de limpeza, transformação, integração e filtragem.
+   - Os dados também serão enviados para APIs com modelos de IA, conforme demonstrado no "<a href="#img123">Esboço da arquitetura</a>".
 
 ## Plano inicial de desenvolvimento
 
