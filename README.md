@@ -131,9 +131,9 @@ Não entendi, confirmar com o professor
 - **Membro responsável:** Alice Caroline  
 - 📆 *13 de Maio a 9 de Junho*
 - Tarefas:
-  -[] Coletar dados via MQTT usando ESP32
-  -[] Armazenar em banco relacional ou NoSQL
-  -[] Processamento inicial com Python (NumPy, Pandas, SciPy)
+  - Coletar dados via MQTT usando ESP32
+  - Armazenar em banco relacional ou NoSQL
+  - Processamento inicial com Python (NumPy, Pandas, SciPy)
 
 ---
 
@@ -141,9 +141,9 @@ Não entendi, confirmar com o professor
 - **Membros responsáveis:** Vitor Albuquerque e Leonardo Sampaio
 - 📆 *10 de Junho a 9 de Julho*
 - Tarefas:
-  -[] Análise com regressão, árvore de decisão e redes neurais
-  -[] Visualização com Matplotlib e Seaborn
-  -[] Criação de dashboards com insights
+  - Análise com regressão, árvore de decisão e redes neurais
+  - Visualização com Matplotlib e Seaborn
+  - Criação de dashboards com insights
 
 ---
 
@@ -151,8 +151,8 @@ Não entendi, confirmar com o professor
 - **Membro responsável:** Vitor Albuquerque
 - 📆 *15 de Julho a 18 de Agosto*
 - Tarefas:
-  -[] Modelos preditivos com alertas automáticos
-  -[] Envio de alertas por email, SMS ou app
+  - Modelos preditivos com alertas automáticos
+  - Envio de alertas por email, SMS ou app
 
 ---
 
@@ -160,9 +160,9 @@ Não entendi, confirmar com o professor
 - **Membro responsável:** Lucas Basseto
 - 📆 *18 de Agosto a 15 de Setembro*
 - Tarefas:
-  -[] Integração com APIs RESTful usando Flask ou FastAPI
-  -[] Documentação com Swagger ou Postman
-  -[] Testes automatizados com `pytest` ou `unittest`
+  - Integração com APIs RESTful usando Flask ou FastAPI
+  - Documentação com Swagger ou Postman
+  - Testes automatizados com `pytest` ou `unittest`
 
 ---
 
@@ -170,9 +170,9 @@ Não entendi, confirmar com o professor
 - **Membro responsável:** Pedro Lucas
 - 📆 *16 de Setembro a 13 de Outubro*
 - Tarefas:
-  -[] Dockerfile para cada serviço
-  -[] Orquestração com Docker Compose
-  -[] Testes automatizados dos containers
+  - Dockerfile para cada serviço
+  - Orquestração com Docker Compose
+  - Testes automatizados dos containers
 
 ---
 
@@ -180,8 +180,8 @@ Não entendi, confirmar com o professor
 - **Membros responsáveis:** Pedro Lucas e Lucas Basseto
 - 📆 *14 de Outubro a 03 de Novembro*
 - Tarefas:
-  -[] Testes unitários, integração e aceitação
-  -[] CI para rodar testes automaticamente a cada commit
+  - Testes unitários, integração e aceitação
+  - CI para rodar testes automaticamente a cada commit
 
 ---
 
@@ -189,8 +189,8 @@ Não entendi, confirmar com o professor
 - **Membro responsável:** Leonardo Sampaio
 - 📆 *04 de Novembro a 17 de Novembro*
 - Tarefas:
-  -[] Documentação clara e atualizada
-  -[] Uso de ferramentas automáticas de geração de doc
+  - Documentação clara e atualizada
+  - Uso de ferramentas automáticas de geração de doc
 
 ---
 
@@ -198,9 +198,9 @@ Não entendi, confirmar com o professor
 - **Membros responsáveis:** Todos do grupo
 - 📆 *20 de novembro a 7 de dezembro*
 - Tarefas:
-  -[] Testes de carga e estresse
-  -[] Monitoramento e ajustes
-  -[] Melhorias na interface
+  - Testes de carga e estresse
+  - Monitoramento e ajustes
+  - Melhorias na interface
 
 
 
