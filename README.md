@@ -198,6 +198,7 @@ Cenário realista: Para 10 sensores enviando dados a cada 5 segundos, o custo es
 <img src="assets/diagrama3.jpg" alt="Arquitetura do projeto" border="0" width=80% height=80% id="img123"></a>
 </p>
 
+
 ## Estratégia de coleta de dados
 
 R: Inicialmente, os dados poderão ser coletados de forma simulada, ou seja, utilizando scripts que geram dados artificiais com base em faixas realistas, 
