@@ -127,7 +127,7 @@ Não entendi, confirmar com o professor
 
 ## Plano inicial de desenvolvimento
 
-# ✅ Fase 1: Coleta de Dados
+ ✅ Fase 1: Coleta de Dados
 - **Membro responsável:** Alice Caroline  
 - 📆 *13 de Maio a 9 de Junho*
 - Tarefas:
@@ -137,7 +137,7 @@ Não entendi, confirmar com o professor
 
 ---
 
-# 📊 Fase 2: Análise de Dados
+ 📊 Fase 2: Análise de Dados
 - **Membros responsáveis:** Vitor Albuquerque e Leonardo Sampaio
 - 📆 *10 de Junho a 9 de Julho*
 - Tarefas:
@@ -147,7 +147,7 @@ Não entendi, confirmar com o professor
 
 ---
 
-# 🔮 Fase 3: Predição
+ 🔮 Fase 3: Predição
 - **Membro responsável:** Vitor Albuquerque
 - 📆 *15 de Julho a 18 de Agosto*
 - Tarefas:
@@ -156,7 +156,7 @@ Não entendi, confirmar com o professor
 
 ---
 
-# 🔌 Fase 4: Integração com APIs
+ 🔌 Fase 4: Integração com APIs
 - **Membro responsável:** Lucas Basseto
 - 📆 *18 de Agosto a 15 de Setembro*
 - Tarefas:
@@ -166,7 +166,7 @@ Não entendi, confirmar com o professor
 
 ---
 
-# 🐳 Fase 5: Contêineres Docker
+ 🐳 Fase 5: Contêineres Docker
 - **Membro responsável:** Pedro Lucas
 - 📆 *16 de Setembro a 13 de Outubro*
 - Tarefas:
@@ -176,7 +176,7 @@ Não entendi, confirmar com o professor
 
 ---
 
-# ✅ Fase 6: Testes Automatizados
+ ✅ Fase 6: Testes Automatizados
 - **Membros responsáveis:** Pedro Lucas e Lucas Basseto
 - 📆 *14 de Outubro a 03 de Novembro*
 - Tarefas:
@@ -185,7 +185,7 @@ Não entendi, confirmar com o professor
 
 ---
 
-# 📚 Fase 7: Documentação
+ 📚 Fase 7: Documentação
 - **Membro responsável:** Leonardo Sampaio
 - 📆 *04 de Novembro a 17 de Novembro*
 - Tarefas:
@@ -194,7 +194,7 @@ Não entendi, confirmar com o professor
 
 ---
 
-# 🔧 Fase 8: Melhorias
+ 🔧 Fase 8: Melhorias
 - **Membros responsáveis:** Todos do grupo
 - 📆 *20 de novembro a 7 de dezembro*
 - Tarefas:
