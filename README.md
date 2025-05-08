@@ -8,7 +8,7 @@
 
 # Sprint 1 - Reply 
 
-## Nome do grupo
+## Grupo 51
 
 ## 👨‍🎓 Integrantes: 
 - <a href="">Alice C. M. Assis - RM 566233</a>
@@ -306,6 +306,8 @@ Etapas da estratégia de coleta:
 
 ## 🗃 Histórico de lançamentos
 
+* 0.2.0 - 08/05/2025
+    *
 * 0.1.0 - 04/05/2025
     *
 
