@@ -12,7 +12,7 @@
 
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/alice-caroline-marinho">Alice Caroline Marinho de Assis</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 2</a>
+- <a href="https://www.linkedin.com/in/pedro-lucas-458917207/">Pedro Lucas Tostes Silva</a>
 - <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
 - <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 4</a> 
 - <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 5</a>
@@ -49,7 +49,12 @@ Este projeto visa o desenvolvimento de uma solução com foco em controle inteli
 
 **Onde os dados serão armazenados?**
 
-**R:** Os dados coletados dos sensores poderão ser armazenados em um banco de dados relacional, como o PostgreSQL ou Oracle Database, hospedado na nuvem (Amazon RDS) ou localmente. Também podem ser armazenados em banco de dados NoSQL, como a Firebase. A escolha do banco de dados dependerá das necessidades específicas da empresa. O local da armazenagem dos dados será definido em conjunto com a equipe de infraestrutura da empresa e também deve ser analisada a necessidade de sigilo dos dados.
+**R:** Os dados serão armazenados em um banco de dados em nuvem utilizando Amazon RDS (PostgreSQL) para dados estruturados (como métricas de sensores e logs) e Amazon S3 para dados brutos e arquivos temporários.
+Por que essa escolha?
+Escalabilidade Automática: O Amazon RDS ajusta capacidade conforme a demanda sem downtime, crucial para linhas de produção com picos de operação.
+Alta Disponibilidade: Replicação multi-AZ garante 99,99% de uptime (SLA AWS), evitando paradas não planejadas.
+Integração com IA: Compatibilidade nativa com serviços AWS como Lambda e SageMaker, facilitando a implementação de modelos de ML.
+Custo-Benefício: Amazon S3 armazena dados brutos a baixo custo (US$ 0,023/GB/mês), enquanto RDS oferece backups automatizados gratuitos.
 
 **Como será feita a integração com modelos de IA?**
 
@@ -84,9 +89,16 @@ Este projeto visa o desenvolvimento de uma solução com foco em controle inteli
 
 4) Qual é o potencial de uso de serviços em nuvem (como AWS EC2, RDS, Lambda ou similares) na arquitetura proposta, mesmo que simulados na etapa atual?
 
-- Mensagens MQTT: Deve ser observado de perto. Se um sensor ESP32 fizer uma leitura a cada 5 segundos, por exemplo, teríamos 720 leituras por hora. Se tivermos 10 sensores, teríamos 7200 mensagens por hora. Isso pode ser um problema para o servidor MQTT, dependendo do número de clientes conectados e do volume de mensagens. Uma solução seria usar um serviço de nuvem que possa escalar automaticamente, como o AWS IoT Core ou o Google Cloud IoT Core.
-- Banco de dados: O uso de um banco de dados relacional na nuvem, como o Amazon RDS ou o Google Cloud SQL, pode facilitar a escalabilidade e a manutenção do banco de dados. Esses serviços oferecem backups automáticos, escalabilidade automática e alta disponibilidade, o que pode ser benéfico para o projeto. Deve-se considerar o custo de armazenamento e transferência de dados, pois esses serviços podem ter custos adicionais dependendo do volume de dados armazenados e transferidos.
-- Processamento de dados: O uso de serviços de computação em nuvem, como o AWS Lambda ou o Google Cloud Functions, pode facilitar o processamento de dados em tempo real. Esses serviços permitem que você execute código em resposta a eventos, como a chegada de novas mensagens MQTT ou a atualização de dados no banco de dados. Também será necessário calcular o custo de execução de cada função, pois o custo pode aumentar rapidamente se o volume de dados for alto.
+A solução utilizará serviços em nuvem da AWS para garantir escalabilidade, baixo custo inicial e integração com IA. As principais escolhas são:
+AWS IoT Core: Substitui servidores MQTT locais, gerenciando conexões dos sensores ESP32 com autenticação segura (TLS).
+Amazon RDS (PostgreSQL): Armazena dados processados com alta disponibilidade e backups automáticos.
+AWS Lambda: Executa modelos leves de Machine Learning (ex: detecção de anomalias) sem custo quando ocioso.
+Amazon EC2: Roda modelos complexos (ex: TabTransformer) em instâncias escaláveis.
+Por que nuvem?
+Custo reduzido: Camada gratuita da AWS permite testes sem investimento inicial.
+Pronto para produção: A mesma arquitetura escala para cenários reais sem modificações.
+Simulação fácil: Dados simulados (ex: gerados com Pandas) podem ser enviados para a AWS IoT Core como se fossem de sensores reais.
+Cenário realista: Para 10 sensores enviando dados a cada 5 segundos, o custo estimado é de US$ 50-100/mês – viável mesmo para pequenas indústrias.
 
 5) Como os dados serão processados e analisados? Quais algoritmos de Machine Learning serão utilizados?
 
